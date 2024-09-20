@@ -4,18 +4,6 @@ import 'package:api_with_bloc_app_learning/features/posts/ui/posts_page.dart';
 import 'package:api_with_bloc_app_learning/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:go_router/go_router.dart';
-
-// final GoRouter _router = GoRouter(
-//   routes: [
-//     GoRoute(
-//       path: '/',
-//       name: 'posts',
-//       builder: (context, state) => const PostsPage(),
-//     ),
-//   ],
-//   errorBuilder: (context, state) => const PageNotFoundScreen(),
-// );
 
 void main() {
   runApp(const MyApp());

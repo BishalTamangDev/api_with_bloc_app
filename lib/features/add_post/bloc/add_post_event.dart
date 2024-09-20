@@ -4,13 +4,18 @@ part of 'add_post_bloc.dart';
 sealed class AddPostEvent {}
 
 // action event
-abstract class AddPostActionEvent extends AddPostEvent{}
+abstract class AddPostActionEvent extends AddPostEvent {}
 
 // adding post :: initial
-class PostAdditionLoadingEvent extends AddPostEvent {}
+class PostAddingEvent extends AddPostEvent {
+  final String title;
+  final String description;
+
+  PostAddingEvent({required this.title, required this.description});
+}
 
 // adding post :: success state
-class PostAdditionSuccessEvent extends AddPostEvent {}
+class PostAddSuccessEvent extends AddPostEvent {}
 
 // adding post :: failure state
-class PostAdditionFailureEvent extends AddPostEvent {}
+class PostAddFailureEvent extends AddPostEvent {}

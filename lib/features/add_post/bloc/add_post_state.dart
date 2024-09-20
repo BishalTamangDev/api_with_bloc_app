@@ -8,9 +8,11 @@ final class AddPostInitial extends AddPostState {}
 // action state
 abstract class AddPostActionState extends AddPostState {}
 
-// add post state
+// add post :: initial
+class PostAddingState extends AddPostState {}
+
 // add post :: success
-class PostAdditionSuccessState extends AddPostActionState {}
+class PostAddSuccessState extends AddPostState {}
 
 // add post :: failure
-class PostAdditionFailureState extends AddPostActionState {}
+class PostAddFailureState extends AddPostState {}

@@ -34,20 +34,19 @@ class PostRepo {
   }
 
   // add post
-  static Future<bool> addPost() async {
+  static Future<bool> addPost(String title, String description) async {
     var status = false;
 
     // fetch posts
     var client = http.Client();
 
-    List<PostDataModel> posts = [];
     try {
       var response = await client.post(
         Uri.parse('https://jsonplaceholder.typicode.com/posts'),
         body: ({
-          "title": 'foo',
-          "body": 'bar',
-          "userId": '1',
+          "title": title,
+          "body": description,
+          "userId": "1",
         }),
       );
 
